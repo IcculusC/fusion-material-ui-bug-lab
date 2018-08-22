@@ -1,0 +1,3 @@
+[submodule "fusion-plugin-material-ui"]
+	path = fusion-plugin-material-ui
+	url = https://github.com/IcculusC/fusion-plugin-material-ui

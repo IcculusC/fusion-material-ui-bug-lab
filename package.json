@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "main": "index.js",
   "dependencies": {
+    "@material-ui/core": "^1.5.1",
     "fusion-cli": "^1.9.0",
     "fusion-core": "^1.5.0",
     "fusion-plugin-react-helmet-async": "^1.0.0",
@@ -16,11 +17,13 @@
     "styletron-react": "^4.3.5"
   },
   "scripts": {
-    "dev": "fusion dev",
+    "install-submodules": "yarn --cwd ./fusion-plugin-material-ui",
+    "build-submodules": "yarn --cwd ./fusion-plugin-material-ui transpile",
+    "dev": "yarn build-submodules && fusion dev",
     "test": "fusion test",
-    "build": "fusion build",
-    "build-production": "fusion build --production",
-    "start": "fusion start"
+    "build": "yarn build-submodules && fusion build",
+    "build-production": "yarn build-submodules && fusion build --production",
+    "start": "yarn build-submodules && fusion start"
   },
   "devDependencies": {
     "enzyme": "^3.4.4"

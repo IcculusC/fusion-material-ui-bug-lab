@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
 import {styled} from 'fusion-plugin-styletron-react';
+import Button from '@material-ui/core/Button';
 
 const Center = styled('div', {
   fontFamily: 'HelveticaNeue-Light, Arial',
@@ -66,6 +67,13 @@ const Home = () => (
             Let&apos;s Get Started
           </GettingStartedLink>
         </Circle>
+      </Center>
+      <Center>
+        <Button
+          variant="contained"
+        >
+          I'm broken
+        </Button>
       </Center>
     </Center>
   </FullHeightDiv>
